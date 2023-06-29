@@ -104,6 +104,9 @@ struct data{
 		}
 	}
 }
+auto lerp(T)(T startValue, T endValue, float t){
+	return startValue + (endValue - startValue) * t;
+}
 data[height][width] data_;
 void main(){
 	foreach(y;0..height){
@@ -123,12 +126,17 @@ void main(){
 		int x=uniform(0,width);
 		int y=uniform(0,height);
 		int d=uniform(0,50);
+		//int delay=uniform(0/*uniform(0,d-1)*/,d);
+		//d-=delay;
+		int[3] values=[uniform(0,50),uniform(0,50),uniform(0,50)];
+		values[].sort;
+		int slow=uniform(30,100);
 		ubyte c=data_[x][y].color;
 		foreach(y_;max(0,y-d)..min(height,y+d+1)){
 		foreach(x_;max(0,x-d)..min(width,x+d+1)){
 			float d_=distance(x,y,x_,y_);
 			if(d_<d){
-				data_[x_][y_].dis2=cast(short)d_;
+				data_[x_][y_].dis2=cast(short)lerp(values[0],values[2],d_/50.0);
 				data_[x_][y_].color2=c;
 			}
 		}}

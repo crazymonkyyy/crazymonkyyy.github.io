@@ -3,52 +3,62 @@ body{
   height: 100%;
   width: 100%;
   margin: 0;
+  color: #fdf6e3;
+  line-height: 1.6;
+  font-size: 18px;
+  background-color: #002b36;
 }
 .real-body {
   margin: 40px auto;
   max-width: 650px;
-  line-height: 1.6;
-  font-size: 18px;
-  color: #444;
   padding: 0 10px;
 }
 h1, h2, h3 {
   line-height: 1.2;
 }
+a {
+	color: #268bd2; /* Link color */
+	text-decoration: none;
+}
+a:visited {
+	color: #6c71c4; /* Visited link color */
+}
+a:hover {
+	color: #dc322f;
+	text-decoration: underline;
+}
 #cookie-banner {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
-  background-color: #f0f0f0;
+  font-size: 8px;
+  background-color: #073642;
   padding: 10px;
   text-align: center;
 }
 #accept-cookies {
-  background-color: #008000;
-  color: #fff;
   border: none;
   padding: 8px 16px;
-  font-size: 14px;
   cursor: pointer;
 }
 /*https://css-tricks.com/how-to-create-a-shrinking-header-on-scroll-without-javascript/ */
-/*.header-outer {
-  display: flex;
-  align-items: center;
-  position: sticky;
-  height: 420px;
-  
-}*/
 .header-inner {
   height: 60px;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  
+}
+.header-inner nav{
+  display: flex;
+}
+.header-inner nav a{
+  margin: 1em;
+  border: 1px solid #586e75;
+  background-color: #002b36;
 }
 .header-outer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   position: sticky;
   top: -360px; /* Equal to the height difference between header-outer and header-inner */
