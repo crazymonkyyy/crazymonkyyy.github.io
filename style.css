@@ -71,4 +71,5 @@ a:hover {
 pre {
   background-color: #073642;
   font-family: monospace;
+  tab-size: 3; /*its important to compromize mmmmmmk*/
 }
