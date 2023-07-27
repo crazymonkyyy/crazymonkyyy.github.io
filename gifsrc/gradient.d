@@ -1,7 +1,7 @@
 #!/usr/bin/env -S sh -c 'dmd -run gradient.d | convert -size 255x255 -depth 8 rgb:- output.gif'
 const width=255;//defining some constants
 const height=255;
-import std;
+import std; // std is short for "standard" and is where all the "standard functions" are
 void main(){
 	foreach(ubyte time;0..255){// Im making it 255 frames long
 	foreach(ubyte y;0..height){// inverse order so x finishes before y
