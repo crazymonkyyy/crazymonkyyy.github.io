@@ -68,3 +68,7 @@ a:hover {
   background-repeat: no-repeat;
   background-image: url('/animated.gif');
 }
+pre {
+  background-color: #073642;
+  font-family: monospace;
+}

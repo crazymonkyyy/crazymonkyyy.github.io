@@ -32,8 +32,8 @@
 </span>
 <span style="background-color:#002b36">
 </span>
-<span style="background-color:#073642">
-</span>
+<pre>
+</pre>
 <span style="background-color:#586e75">
 </span>
 <span style="background-color:#657b83">
@@ -62,4 +62,3 @@
 </span>
 <span style="background-color:#d33682">
 </span>
-dmd -I./experiments -I./mylibs -I./raylib -I./source -J=./source -i -L-lraylib -run source/gentags.d 
