@@ -71,5 +71,12 @@ a:hover {
 pre {
   background-color: #073642;
   font-family: monospace;
+  line-height: 1.2;
   tab-size: 3; /*its important to compromize mmmmmmk*/
+}
+.codetitle{
+  font-style: italic;
+  color:#839496;
+  line-height: 1;
+  font-size: 14px;
 }

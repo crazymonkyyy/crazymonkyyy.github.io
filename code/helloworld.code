@@ -1,0 +1,5 @@
+<span style="color:#dc322f">i</span><span style="color:#cb4b16">m</span><span style="color:#b58900">p</span><span style="color:#859900">o</span><span style="color:#2aa198">r</span><span style="color:#268bd2">t</span><span style="color:#fdf6e3"> </span><span style="color:#dc322f">std</span><span style="color:#2aa198">;
+
+</span><span style="color:#d33682">void</span><span style="color:#fdf6e3"> </span><span style="color:#dc322f">main</span><span style="color:#cb4b16">(</span><span style="color:#b58900">)</span><span style="color:#2aa198">{
+</span><span style="color:#fdf6e3">	</span><span style="background-color:#586e75"><span style="color:#859900">"hello world"</span><span style="color:#2aa198">.</span><span style="color:#6c71c4">writeln</span><span style="color:#2aa198">;
+</span></span><span style="color:#2aa198">}
