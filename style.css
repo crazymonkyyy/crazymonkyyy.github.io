@@ -35,6 +35,7 @@ a:hover {
   background-color: #073642;
   padding: 10px;
   text-align: center;
+  line-height: .8;
 }
 #accept-cookies {
   border: none;
