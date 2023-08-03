@@ -35,6 +35,7 @@ a:hover {
   background-color: #073642;
   padding: 10px;
   text-align: center;
+  line-height: .8;
 }
 #accept-cookies {
   border: none;
@@ -79,6 +80,10 @@ pre {
   color:#839496;
   line-height: 1;
   font-size: 14px;
+}
+.code{
+  background-color: #073642;
+  font-family: monospace;
 }
 table {
   width: 100%;

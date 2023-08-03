@@ -1,0 +1,10 @@
+<span style="color:#fdf6e3">	</span><span style="color:#b58900">foreach</span><span style="color:#fdf6e3">(</span><span style="color:#2aa198">t</span><span style="color:#fdf6e3">;20..245){
+		</span><span style="color:#dc322f">discmphigh</span><span style="color:#fdf6e3">=</span><span style="color:#2aa198">t</span><span style="color:#fdf6e3">;
+		</span><span style="color:#dc322f">discmplow</span><span style="color:#fdf6e3">=</span><span style="color:#2aa198">t</span><span style="color:#6c71c4">*1.66</span><span style="color:#fdf6e3">-</span><span style="color:#d33682">200</span><span style="color:#fdf6e3">;
+		</span><span style="color:#cb4b16">discmp2high</span><span style="color:#fdf6e3">=(</span><span style="color:#2aa198">t</span><span style="color:#d33682">-85</span><span style="color:#fdf6e3">)</span><span style="color:#6c71c4">/2</span><span style="color:#fdf6e3">;
+	</span><span style="color:#cb4b16">	discmp2low</span><span style="color:#fdf6e3">=((</span><span style="color:#2aa198">t</span><span style="color:#d33682">-200.0</span><span style="color:#fdf6e3">)</span><span style="color:#6c71c4">/2</span><span style="color:#fdf6e3">)</span><span style="color:#6c71c4">*2.5</span><span style="color:#fdf6e3">;
+		</span><span style="color:#b58900">if</span><span style="color:#fdf6e3">(</span><span style="color:#2aa198">t</span><span style="color:#fdf6e3">></span><span style="color:#d33682">225</span><span style="color:#fdf6e3">){
+			</span><span style="color:#dc322f">discmphigh</span><span style="color:#fdf6e3">=</span><span style="color:#2aa198">t</span><span style="color:#d33682">-225.0</span><span style="color:#fdf6e3">;
+			</span><span style="color:#dc322f">discmplow</span><span style="color:#fdf6e3">=</span><span style="color:#d33682">-100</span><span style="color:#fdf6e3">;
+		}
+		...
