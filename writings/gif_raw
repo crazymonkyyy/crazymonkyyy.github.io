@@ -4,7 +4,7 @@ A brief history of computers user Interfaces
 
 Back when dinosaurs roamed the earth, and reality was in black a white, there was a room-sized computer and someone was deciding how to talk to it.
 
-They had electronic telegram machines, where you'd type `sos` on a qwerty keyboard and down some wire a signal of ---...--- would be sent, and the other end a machine would read that signal and decode it as 'sos' and print it out on some paper.
+They had electronic telegram machines, where you'd type "sos" on a qwerty keyboard and down some wire a signal of ---...--- would be sent, and the other end a machine would read that signal and decode it as "sos" and print it out on some paper.
 
 They took a telegram machine and set it up so you talk to this room-sized computer via telegram.
 
@@ -18,11 +18,12 @@ That is what a terminal is, you talking to a computer via telegram; do not treat
 
 Breaking down the magic Linux-ism line
 
-The first and by far most complicated line of code is `#!/usr/bin/env -S sh -c 'dmd -run gengif.d | convert -size 840x360 -depth 8 rgb:- output.gif'`
+The first and by far most complicated line of code is 
+#!code/magicline
 
 This one line is 90% of the difficulty of how this project was made and I will be breaking it down slowly 
 
-`#!`
+#!
 
 This character combo, at the start of a file, tells a Linux system that this is a script.
 
@@ -30,31 +31,31 @@ And a script, using this very important bit of computer history, is when a compu
 
 It is followed by which "shell" or "telegram listener" it should send the file to.
 
-'/usr/bin/env -S sh -c'
+/usr/bin/env -S sh -c
 
 I don't know what this actually does and copy and pasted off a website :D
 
-`dmd -run gengif.d`
+dmd -run gengif.d
 
 Dmd is the basic compiler for D and '-run' makes it run, while gengif.d is the name of the file
 
-`|`
+|
 
 A "pipe", is when the output of a program is used *drum roll* as a telegram for another program.
 
-`convert`
+convert
 
 This is part of the "image magick" toolkit, I believe the part of the tool kit for converting files, maybe. So just imagine a wizard.
 
-`-size 840x360 -depth 8`
+-size 840x360 -depth 8
 
-"expect a image size of 840x360, and 0-255 numbers"
+"expect a image size of 840x360, and 8-bit numbers"
 
-`rgb:-`
+rgb:-
 
 The - is magic in Imagemagick for piped input, the rgb: is overloading the data channel format.
 
-`output.gif`
+output.gif
 
 The output I wonder what file type.
 
@@ -62,11 +63,7 @@ Putting it all together, you do that hardest part of all programming, getting a 
 
 Artist rendering of the process:
 
----
-
-10-line version:
-
----
+15-line version
 
 
 Voronoi diagrams and growing circles

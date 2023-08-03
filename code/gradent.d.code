@@ -1,0 +1,17 @@
+
+<span style="background-color:#586e75"><span style="color:#dc322f">#!</span><span style="color:#cb4b16">/usr/bin/env -S sh -c</span><span style="color:#fdf6e3"> '</span><span style="color:#b58900">dmd -run gradient.d</span><span style="color:#fdf6e3"> </span><span style="color:#859900">|
+</span><span style="color:#2aa198">convert</span><span style="color:#fdf6e3"> </span><span style="color:#268bd2">-size 255x255 -depth 8</span><span style="color:#fdf6e3"> </span><span style="color:#6c71c4">rgb:-</span><span style="color:#fdf6e3"> </span><span style="color:#d33682">output.gif</span><span style="color:#fdf6e3">'
+</span></span><span style="color:#b58900">const</span><span style="color:#fdf6e3"> </span><span style="color:#268bd2">width=255;
+</span><span style="color:#b58900">const</span><span style="color:#fdf6e3"> </span><span style="color:#268bd2">height=255;
+</span><span style="color:#b58900">import std;
+void</span><span style="color:#fdf6e3"> </span><span style="color:#859900">main(){
+</span><span style="color:#fdf6e3">	</span><span style="color:#b58900">foreach</span><span style="color:#859900">(</span><span style="color:#268bd2">ubyte</span><span style="color:#fdf6e3"> </span><span style="color:#dc322f">time</span><span style="color:#fdf6e3">;0..</span><span style="color:#268bd2">255</span><span style="color:#859900">){
+</span><span style="color:#fdf6e3">	</span><span style="color:#b58900">foreach</span><span style="color:#859900">(</span><span style="color:#268bd2">ubyte</span><span style="color:#fdf6e3"> </span><span style="color:#859900">y</span><span style="color:#fdf6e3">;0..</span><span style="color:#268bd2">height</span><span style="color:#859900">){
+</span><span style="color:#fdf6e3">	</span><span style="color:#b58900">foreach</span><span style="color:#859900">(</span><span style="color:#268bd2">ubyte</span><span style="color:#fdf6e3"> </span><span style="color:#268bd2">x</span><span style="color:#fdf6e3">;0..</span><span style="color:#268bd2">width</span><span style="color:#859900">){
+</span><span style="color:#fdf6e3">		</span><span style="color:#268bd2">ubyte</span><span style="color:#fdf6e3"> </span><span style="color:#6c71c4">r</span><span style="color:#859900">=</span><span style="color:#dc322f">time</span><span style="color:#859900">;
+</span><span style="color:#fdf6e3">		</span><span style="color:#268bd2">ubyte</span><span style="color:#fdf6e3"> </span><span style="color:#6c71c4">g</span><span style="color:#859900">=y;
+</span><span style="color:#fdf6e3">		</span><span style="color:#268bd2">ubyte</span><span style="color:#fdf6e3"> </span><span style="color:#6c71c4">b</span><span style="color:#859900">=</span><span style="color:#268bd2">x</span><span style="color:#859900">;
+</span><span style="color:#fdf6e3">		</span><span style="color:#268bd2">ubyte</span><span style="color:#859900">[</span><span style="color:#6c71c4">3</span><span style="color:#859900">]</span><span style="color:#fdf6e3"> </span><span style="color:#d33682">pixel</span><span style="color:#859900">=</span><span style="color:#6c71c4">[r,g,b]</span><span style="color:#859900">;
+</span><span style="color:#fdf6e3">		</span><span style="color:#b58900">stdout.rawWrite</span><span style="color:#859900">(</span><span style="color:#d33682">pixel</span><span style="color:#859900">);
+</span><span style="color:#fdf6e3">	</span><span style="color:#859900">}}}
+}

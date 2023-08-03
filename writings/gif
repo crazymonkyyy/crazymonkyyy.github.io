@@ -1,0 +1,116 @@
+<a href="https://github.com/crazymonkyyy/crazymonkyyy.github.io/blob/master/gengif.d">code link</a>
+
+<span style="background-color:#002b36"><span style="color:#fdf6e3"><h1><span style="color:#fdf6e3">How I made my website gif
+
+</span></h1><h2><span style="color:#fdf6e3">A brief history of computers user interfaces
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">Back when dinosaurs roamed the earth, and reality was in black a white, there was a room-sized computer and someone was deciding how to talk to it.
+
+They had electronic telegram machines, where you'd type </span></span><span class="code"><span style="color:#fdf6e3">"sos"</span></span><span style="background-color:#002b36"><span style="color:#fdf6e3"> on a qwerty keyboard and down some wire a signal of </span></span><span class="code"><span style="color:#fdf6e3">---...---</span></span><span style="background-color:#002b36"><span style="color:#fdf6e3"> would be sent, and the other end a machine would read that signal and decode it as </span></span><span class="code"><span style="color:#fdf6e3">"sos"</span></span><span style="background-color:#002b36"><span style="color:#fdf6e3"> and print it out on some paper.
+
+They took a telegram machine and set it up so you talk to this room-sized computer via telegram.
+
+And then nothing.
+
+NOTHING!
+
+Computers still are running as if they were being talked to via telegram, and everyone is maintaining a pile of shit to hide the shame that no one has made a new (successful) os in decades.
+
+That is what a terminal is, you talking to a computer via telegram; do not treat it like magic.
+
+<video autoplay=true muted=true loop=true><source src="/images/terminal.mp4"/></video>
+
+</span></span><h2><span style="color:#fdf6e3">Breaking down the </span><span style="color:#dc322f">m</span><span style="color:#b58900">a</span><span style="color:#2aa198">g</span><span style="color:#268bd2">i</span><span style="color:#6c71c4">c</span><span style="color:#fdf6e3"> Linux-ism line
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">The first and by far most complicated line of code is 
+#!magicline
+
+This one line is 90% of the difficulty of how this project was made and I will be breaking it down slowly 
+
+</span></span><h2><span style="color:#dc322f">#!
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">This character combo, at the start of a file, tells a Linux system that this is a script.
+
+And a script, using this very important bit of computer history, is when a computer pretends it sends itself a telegram. Character to character, as if a human wrote it.
+
+It is followed by which "shell" or "telegram listener" it should send the file to.
+
+</span></span><h2><span style="color:#cb4b16">/usr/bin/env -S sh -c
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">I don't know what this actually does and copy and pasted off a website :D
+
+</span></span><h2><span style="color:#b58900">dmd -run gengif.d
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">Dmd is the basic compiler for D and '-run' makes it run, while gengif.d is the name of the file
+
+</span></span><h2><span style="color:#859900">|
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">A "pipe", is when the output of a program is used *drum roll* as a telegram for another program.
+
+</span></span><h2><span style="color:#2aa198">convert
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">This is part of the "image magick" toolkit, I believe the part of the tool kit for converting files, maybe. So just imagine a wizard.
+
+</span></span><h2><span style="color:#268bd2">-size 840x360 -depth 8
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">"expect a image size of 840x360, and 8-bit numbers"
+
+</span></span><h2><span style="color:#6c71c4">rgb:-
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">The - is magic in Imagemagick for piped input, the rgb: is overloading the data channel format.
+
+</span></span><h2><span style="color:#d33682">output.gif
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">The output I wonder what file type.
+
+Putting it all together, you do that hardest part of all programming, getting a computer to just even remotely consider listening to you.
+
+</span></span><h2><span style="color:#fdf6e3">Artist rendering of the process:
+
+<img src="/images/wizard.gif" alt="vomiting pixels at a wizard to make a gif">
+
+15-line version
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">
+#!gradent.d
+</span></span><h2><span style="color:#fdf6e3">
+<img src="/images/gradent.gif" alt="pixely and bad shifting gradent">
+
+Voronoi diagrams and growing circles
+
+<img src="/images/layer1.gif" alt="circles growing into a voronoi diagram">
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">It's a well-known result that growing circles will produce a Voronoi diagram, I'm very much not breaking ground here.
+
+To render a Voronoi diagram (in a terrible way) each pixel asks "What color is my nearest point"
+
+To render a circle (in a terrible way), each pixel asks "How far away from the center am I" and compares it to the radius
+
+To render a "ring" it's the same as the circle but there's a minimum radius
+
+<img src="/images/diagram.gif" alt="nonsense diagram I thought may make things clearer idk">
+
+This all quite naturally combines, where I precomputed the color and distance for each pixel, and in each frame, the precomputed result is compared to a global min and max distances. All I needed to do was keep the min distance quite small for a long time, and well the end seemed boring I added some complexity.
+
+</span></span><h2><span style="color:#fdf6e3">Random circles alone are interesting
+
+<img src="/images/layer2.gif" alt="random circles spawning in">
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">Using the same logic a precomputed layer of data of a distance and indexed color, circles that pop in and out are enough to make something worth looking at.
+
+Instead of a random color tho, I grabbed the color from the layer 1 Voronoi diagram to keep it consistent.
+
+</span></span><h2><span style="color:#fdf6e3">Animation is simple math, with terrible tooling
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">With those tools in hand, the question becomes, what to set these 4 values?
+
+#!animation_math.d
+
+It was awful trial and error and it's this awful bit of code; so here's a helpful graph. I would like to see these sorts of things be easy to draw, I don't understand why the tool doesn't exist where you draw some lines, and you get some math out, or hell a list of values.
+
+<img src="/images/graph.gif" alt="graph of the above code, with a croped synced version of the gif">
+
+</span></span><h2><span style="color:#fdf6e3">Optimizing gifs
+
+</span></h2><span style="background-color:#002b36"><span style="color:#fdf6e3">After that was all said and done, it was still a little lifeless, and 2 megabytes, more than I want to trust will download instantly.
+
+So gifs are a list of pictures and you can just change the timings, so I found the website <a href="https://ezgif.com/">https://ezgif.com/</a> and started deleting frames and made some key frames longer, such as the first one; giving your computer time to get a head start to download the image and getting it down to 357.8 kb

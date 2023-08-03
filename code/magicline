@@ -1,0 +1,2 @@
+#!/usr/bin/env -S sh -c 'dmd -run gengif.d | <p>
+convert -size 840x360 -depth 8 rgb:- output.gif'

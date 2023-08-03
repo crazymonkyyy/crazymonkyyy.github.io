@@ -81,3 +81,7 @@ pre {
   line-height: 1;
   font-size: 14px;
 }
+.code{
+  background-color: #073642;
+  font-family: monospace;
+}
