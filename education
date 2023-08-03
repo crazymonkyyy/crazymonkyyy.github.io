@@ -1,34 +1,55 @@
-I'm currently enrolled at Bridgeland Technical College, in the Business Technology todo fancy word
+I'm currently enrolled at Bridgerland Technical College, in the Business Technology Specialization
 
-I have some random classes from Coursua:
+<table>
+  <tr> <th> Coursera </th></tr> 
+  <tr>
+    <td>Java Programming: Arrays, Lists and Structured Data</td>
+  </tr>
+  <tr>
+    <td>Analysis of Algorithms</td>
+  </tr>
+  <tr>
+    <td>Graph and String Algorithms</td>
+  </tr>
+  <tr>
+    <td>Approximation Algorithms</td>
+  </tr>
+  <tr>
+    <td>Big Data Analysis</td>
+  </tr>
+  <tr>
+    <td>Parallel Programming</td>
+  </tr>
+  <tr>
+    <td>Functional Program Design in Scala</td>
+  </tr>
+  <tr>
+    <td>Functional Programming Principles</td>
+  </tr>
+</table>
 
-Java Programming: Arrays, Lists and Structured Data
+Generic Office Skills
+<table>
+  <tr><th>Tosa</th><th>Example work</th><tr>
+  <tr>
+    <td><a href="/files/tosa-excel.pdf">Excel</a></td>
+    <td><a href="/files/finalproject.xlsx">Excel</a></td>
+  </tr>
+  <tr>
+    <td><a href="/files/tosa-word.pdf">Word</a></td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td><a href="/files/tosa-powerpoint.pdf">PowerPoint</a></td>
+    <td><a href="/files/websitegif.pptx">PowerPoint</a></td>
+  </tr>
+  <tr>
+    <td>N/A</td>
+    <td><a href="files/photoshop.pdf">PhotoShop</a></td>
+    </tr>
 
-Analysis of Algorithms
+</table>
 
-Graph and String Algorithms
-
-Approximation Algorithms
-
-Big Data Analysis
-
-Parallel Programming
-
-Functional Program Design in Scala
-
-Functional Programming Principles
-
-(todo make html table)
-
-As part of Bridgerland, I picked up a few Tosa cerfications:
-
-<a href="/files/tosa-excel.pdf">    Excel</a>
-
-<a href="/files/tosa-word.pdf">    Word</a>
-
-<a href="/files/tosa-powerpoint.pdf">    PowerPoint</a>
-
-I had a photoshop class, where I made <a href="/files/photoshop.pdf">this</a> as a final project reusing fragments of some of <a href="https://github.com/crazymonkyyy/generated-art"> programming art</a>
 
 todo get linux certs
 

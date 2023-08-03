@@ -80,3 +80,17 @@ pre {
   line-height: 1;
   font-size: 14px;
 }
+table {
+  width: 100%;
+  border: 2px solid #268bd2;
+}
+
+th, td ,tr {
+  border: 1px solid #2aa198;
+  padding: 10px;
+  text-align: center;
+}
+th{
+  font-size: 18px;
+  color: #93a1a1;
+}
