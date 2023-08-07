@@ -13,6 +13,9 @@ body{
   max-width: 650px;
   padding: 0 10px;
 }
+.real-body:has(.proj-div){
+  max-width: 850px;
+}
 h1, h2, h3 {
   line-height: 1.2;
 }
@@ -84,6 +87,19 @@ pre {
 .code{
   background-color: #073642;
   font-family: monospace;
+}
+.project{
+  max-height: 250px;
+  max-width: 50%;
+  transition-delay: .05s;
+}
+.project:hover{
+  height: auto;
+  max-height: none;
+  max-width: 100%;
+}
+.proj-div{
+  overflow:hidden;
 }
 table {
   width: 100%;
