@@ -1,0 +1,43 @@
+N indispencable features of dlang
+
+(todo replace N and submit to buzzfeed)
+
+I've been struggling to write a review for D cause in truth I hate it, but like here I am still all in on it and have written educational material in it. I just look at the other options and see red flags or when I look for features I find something I consider important missing. If you don't hate a programming languge, you havnt yet used it; so heres just a pure sappy optimistic take on D to match all the others.
+
+Features
+
+Better Templates
+
+D has just better templates then C++, even if thats not a high bar. I have yet to see good templates, but D is better. See footnotes for a defense of this being the number 1 feature.
+
+Mixins
+
+D allows you to generate strings compile time, then inject those strings, into code. So no python and c++ hell or whatever poeple used to do in c; d is confident in its apility to handle strings, and when you just need to meta program in the purest sense. You can do a little small thing, to generate the code you otherwise would write in some complex multi-step process.
+
+Biult-in Dynmaic Arrays
+
+90% of the time you just need a place to store some data. You dont want to write Vector<Vector<int>> or god help you, your own data manigment solution. You dont nessily need something fancy, but a nice work horse, and in D its [] and that type has a dynmaic array, and its syntax is fine.
+
+-i
+
+D has a compiler flag that just try's at all to find all the files you want. 95% of the time i'm running a dmd -i -run on some file, and it just works. No header files, no biuld managers, or I can program my own trivially.
+
+Fast Compiler
+
+D has a compiler that is almost reasonable in its speed. It shouldnt be impressive that my 100 lines of code script runs instantly, but the standard is so low that its a feature of note.
+
+Biult-in Asserts
+
+You can declare your assumtions about your code, in code, in-line with your code without a whole tool chain or whatever other languges are doing when they debug.
+
+Almost Good Type Syntax
+
+Types are defined left-to-right; no c spiral method here.
+
+Ranges
+
+D iterator concept everyone agrees on is "front"( give me an element), "popFront" (I'm done with this element), "empty" (im I done).... with a verbose and awful interface in the std. But this is better the dual pointers of c++ iterators, or nullable fronts people use. I wish there was better ones; but this is the case of everyone is worse.
+
+Tiered op-overloads as rewrites 
+
+a+b can be defined as a.opBinary!"+"(b) or b.opBinaryRight!"+"(a); this allows mixin definitions of op overloads, or you to handle your types in fancy ways. I take issue with design choices, but again better than not having op overloads(really what are people thinking) or the oo versions.
