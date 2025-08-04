@@ -1,9 +1,12 @@
 #!/usr/bin/env -S sh -c 'dmd -run projectgen.d > projects'
 import std;
 enum string[] list=[
+"https://github.com/crazymonkyyy/frut_gam3",
+"https://github.com/crazymonkyyy/snake",
 "https://github.com/crazymonkyyy/text-paint",
 "https://github.com/crazymonkyyy/lazyinfographic",
 "https://github.com/crazymonkyyy/dingbats",
+"https://github.com/crazymonkyyy/blackmagic-in-d/",
 ];
 int hash(string s) {
   int result = 0;

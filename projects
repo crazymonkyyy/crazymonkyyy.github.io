@@ -1,4 +1,30 @@
 <div class="proj-div">
+<img class="project" src="images/frutgame.gif" align="left"/>
+<h1>
+<a href=https://github.com/crazymonkyyy/frut_gam3>
+frutgam3
+</a>
+</h1>
+<p>
+Match 3, physic's combination game playable at <a href="monkyyy.itch.io/frut-gam3">  monkyyy.itch.io/frut-gam3 </a>
+<p>
+<a href="https://github.com/crazymonkyyy/raylib-2024">Wasm toolkit</a> was mine and besides raylib was largely from scratch.
+<p>
+</div><hr>
+<div class="proj-div">
+<img class="project" src="images/snake.gif" align="right"/>
+<h1>
+<a href=https://github.com/crazymonkyyy/snake>
+Snake
+</a>
+</h1>
+<p>
+Not grid-based, analog, snake game with a control scheme that has some complexity to it <a href="monkyyy.itch.io/snake">  monkyyy.itch.io/snake </a>
+<p>
+<a href="https://github.com/crazymonkyyy/raylib-2024">Wasm toolkit</a> was mine and besides raylib was largely from scratch.
+<p>
+</div><hr>
+<div class="proj-div">
 <img class="project" src="images/screenrec001.gif" align="left"/>
 <h1>
 <a href=https://github.com/crazymonkyyy/text-paint>
@@ -13,9 +39,6 @@ Supports 32 tags across two layers, markup agnosist but probaly need some post p
 </div><hr>
 <div class="proj-div">
 <img class="project" src="images/lazyinfo.png" align="right"/>
-//todo I updated things but havnt changed the key binding pic or this
-<p>
-<p>
 <h1>
 <a href=https://github.com/crazymonkyyy/lazyinfographic>
  lazy infographic
@@ -28,10 +51,23 @@ a tool for making keybinding infographic
 <div class="proj-div">
 <h1>
 <a href=https://github.com/crazymonkyyy/dingbats>
- Dingbats (Alpha 2)
+ Dingbats
 </a>
 </h1>
 <p>
 A collection of simple and short exercises to help you learn D.
+<p>
+</div><hr>
+<div class="proj-div">
+<h1>
+<a href=https://github.com/crazymonkyyy/blackmagic-in-d/>
+ Black Magic in D
+</a>
+</h1>
+<p>
+As I explore template pattern and useful compiler bugs, Ive resently started attempt to store them here to make them slightly more orginized:
+<p>
+https://crazymonkyyy.github.io/blackmagic-in-d/
+<p>
 <p>
 </div><hr>
